@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn clean install -DskipTests'
+        sh '''echo $M2_HOME
+echo $PATH
+mvn clean install -DskipTests'''
       }
     }
 
